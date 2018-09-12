@@ -1,0 +1,278 @@
+import { Head, Appear, Image } from 'mdx-deck';
+import { Split } from 'mdx-deck/layouts';
+import Login from './components/login.js';
+import ImageSplit from './components/image-split.js';
+export { default as theme } from './themes/yellow-book.js';
+
+<Head>
+	<title>Introduction to Open API</title>
+	<meta name='twitter:card' content='summary_large_image' />
+	<meta name='twitter:site' content='@fusionstrings' />
+	<meta name='twitter:title' content='Introduction to Open API' />
+	<meta name='twitter:description' content='Introduction to Open API' />
+	<meta name='twitter:image' content='https://cdn-images-1.medium.com/fit/t/1600/480/1*Qf94xFwde421J_ZSmdPJDw.png' />
+</Head>
+
+# Introduction to
+
+<Image src="./images/OpenAPI_Logo_Yellow.svg" width="300px" height="200px" style={{margin: 'auto'}} />
+
+---
+
+# Agenda
+
+<ul style={{textAlign: 'left'}}>
+	<Appear>
+		<li>What is Open API</li>
+		<li>What are competing standards</li>
+		<li>What are the adoption benefits in ComeOn's context</li>
+		<li>How to start</li>
+		<li>Examples in wild</li>
+		<li>Help and inspirations</li>
+	</Appear>
+</ul>
+
+---
+
+# For no reason at all
+
+---
+
+export default Split
+
+Queue
+
+No Queue
+
+---
+
+export default Split
+
+<ImageSplit src="./images/puppy.jpg">Puppy</ImageSplit>
+
+<ImageSplit src="./images/cute-cat.jpg">Cats</ImageSplit>
+
+---
+
+export default Split
+
+Tea
+
+Coffee
+
+---
+
+export default Split
+
+Frontend
+
+Backend
+
+---
+
+# About me
+
+![](images/company.jpg)
+
+---
+## My day to day work?
+
+<Appear>
+	<div>Russian roulette 🔫</div>
+	<div>☕</div>
+	<div>🐞</div>
+	<div>🎁</div>
+	<div>📅</div>
+</Appear>
+
+---
+
+## Task of the day
+
+![](images/Cute-Puppy-Login-Form-Design.gif)
+
+---
+
+## The result
+
+<Login />
+
+---
+
+## The fix
+
+<Login showResultAfterSubmit />
+
+---
+
+# Not quite
+
+![](images/support.gif)
+
+---
+
+# They said boss is not happy!!!
+
+<div style={{textAlign: 'center'}}>
+	<img src="images/annoyed.gif" width="40%" />
+	<p>
+		Dunno, reading faces is't my soft skill
+	</p>
+</div>
+
+---
+
+> "Did you call the right service?"
+
+– Colleagues
+
+---
+
+# Services?
+
+- A modern app is devided into multiple logical services.
+- These services expose APIs for interaction with other services or Apps.
+- In context of this talk APIs refer to Rest APIs served over HTTP
+
+---
+
+### More precisely these...
+
+![](images/services.jpg)
+
+---
+
+# How to use a service?
+
+<ul>
+	<Appear>
+		<li> Get the URL of service </li>
+		<li> Call with correct method (<code>GET</code>, <code>POST</code>, <code>PUT</code> etc.)</li>
+		<li> Use correct <code>Content-Type</code> and other request headers.</li>
+		<li>...and don't forget correct payload</li>
+		<li>Hmm, one last thing, some URLs may contain query parameters. They are very important.</li>
+	</Appear>
+</ul>
+
+---
+
+# Life was fun again
+
+<figure style={{textAlign: 'center'}}>
+	<img src="images/slide.gif" />
+	<figcaption>- A happy app sliding on service mesh circa 2018</figcaption>
+</figure>
+
+---
+
+# ... Until it wasn't
+
+<figure style={{textAlign: 'center'}}>
+	<img src="images/error.gif" />
+	<figcaption>- A sad app protesting against too much exploitation circa 2018</figcaption>
+</figure>
+
+---
+
+# Few JIRA's later
+## Checklist continues
+
+<ul>
+	<Appear>
+		<li>If something is wrong services response contains error message.</li>
+		<li>Services might have different error message data structure.</li>
+		<li>If service is unavailable or server throws, you might not get response in expected content type, so handle that as well, Please.</li>
+	</Appear>
+</ul>
+
+---
+
+# Woes of new feature
+
+Great sportsmanship
+
+<figure style={{textAlign: 'center'}}>
+	<img src="images/service-response.gif" />
+	<figcaption>- Overwhelming response from a service.</figcaption>
+</figure>
+
+---
+
+# Colleagues are great
+
+- I've been encouraged to read sourcecode of various services.
+- I've been informed about any changes in API.
+- I've been coached with methods to investigate and debug the issues.
+- Even they sometime handle frontend issues only to realise halfway that it's frontend issue. 
+
+### Have you got one to cover you?
+
+---
+
+# Not everyone is that lucky...
+For you there are other ways to describe APIs
+
+- [API Blueprint](https://apiblueprint.org/)
+- [API Doc](http://apidocjs.com/)
+- [Postman](https://www.getpostman.com)
+- [RESTful API Modeling Language](https://raml.org/)
+- [JSON API](http://jsonapi.org/)
+- [Open API Specification](https://www.openapis.org) F.K.A. Swagger Specification
+
+---
+
+# What is Open API?
+
+Programming language-agnostic specification standard to govern how REST APIs are described.
+
+---
+
+# Features
+
+- Helps you describe REST APIs in texual format (JSON, yaml)
+- Difinition files can be written by hand or auto generated
+- These API definitions can be consumed by Humans and Machines alike
+- Tooling can generate API documentation and mocks
+- In active development and adopted by all the big players in industry
+
+---
+
+# Tooling
+
+[Swagger](https://swagger.io/) is a set of tooling which helps generating Open API specification.
+- [Swagger Codegen](https://swagger.io/tools/swagger-codegen/) Auto generate server stubs and client SDKs for any API
+- [Swagger Editor](https://swagger.io/tools/swagger-editor/) Design, describe, and document your API
+- [Swagger UI](https://swagger.io/tools/swagger-ui/) visualize and interact with the API’s resources without having any of the implementation logic in place.
+
+---
+
+# Premium tooling
+- [SwaggerHub](https://swagger.io/tools/swaggerhub/) The Platform for API Design and Documentation with OpenAPI
+- [Swagger Inspector](https://swagger.io/tools/swagger-inspector/) Test and document APIs
+
+---
+
+# Benefits
+
+<ul style={{textAlign: 'left'}}>
+	<Appear>
+		<li>Improve collaboration between service provider and consumer</li>
+		<li>Improve discoverability of services (for humans and machines)</li>
+		<li>Promote predictable service usage</li>
+		<li>Early feedback during development life cycle</li>
+		<li>Help in spoting integration bugs / issues early and easily</li>
+	</Appear>
+</ul>
+
+---
+
+# How to start
+- SwaggerHub
+- [Read the documentation](https://swagger.io/specification/)
+- Swagger Editor
+- Swagger Core (annotation)
+
+---
+# Questions
+---
+# The end

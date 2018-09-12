@@ -1,0 +1,129 @@
+import { Head, Appear, Image } from 'mdx-deck';
+export { default as theme } from './themes/yellow-book.js';
+
+<Head>
+	<title>Introduction to Open API</title>
+	<meta name='twitter:card' content='summary_large_image' />
+	<meta name='twitter:site' content='@fusionstrings' />
+	<meta name='twitter:title' content='Introduction to Open API' />
+	<meta name='twitter:description' content='Introduction to Open API' />
+	<meta name='twitter:image' content='https://cdn-images-1.medium.com/fit/t/1600/480/1*Qf94xFwde421J_ZSmdPJDw.png' />
+</Head>
+
+# Introduction to
+
+<Image src="./images/OpenAPI_Logo_Yellow.svg" width="300px" height="200px" style={{margin: 'auto'}} />
+
+---
+
+# Goal
+
+<ul style={{textAlign: 'left'}}>
+	<Appear>
+		<li>Improve collaboration between service provider and consumer</li>
+		<li>Improve discoverability of services (for humans and machines)</li>
+		<li>Promote predictable service usage</li>
+		<li>Early feedback during development life cycle</li>
+		<li>Spot integration bugs / issues early and easily</li>
+	</Appear>
+</ul>
+
+```notes
+No need to run an app and check if it works, inspect request / response / payload
+
+Not a la Kubernetes service discovery
+Developer of consumer app may refer to service catalog to find -
+	- what service to use and when
+	- understand and develop for different request / response shape
+
+Express and agree on the Request / Response / payload before developing and changing implementation
+No need to read and able to understand source code
+Don't wonder if mock data is outdated
+Easier upgrade and broadcast of caution in case of upgrade
+
+A design first approach can give early feedback about viability of implementation.
+	- You may find edge cases
+	- This style of implementation promotes optimization for consumer.
+	- A service not optimised for consumption should revisit it's purpose of existance.
+
+Trivial to write tests and integration issues
+If a service doesn't behave as per specs, it's a bug.
+```
+
+---
+
+# Agenda
+
+<ul style={{textAlign: 'left'}}>
+	<Appear>
+		<li>What is Open API</li>
+		<li>What are competing standards</li>
+		<li>What are the adoption benefits in ComeOn's context</li>
+		<li>How to start</li>
+		<li>Examples in wild</li>
+		<li>Help and inspirations</li>
+	</Appear>
+</ul>
+
+---
+
+### What is Open API?
+
+Standard specification to govern how REST APIs are described.
+
+---
+
+# Little bit of History
+
+A brief introduction of [HTTP](https://tools.ietf.org/html/rfc7230) based 
+[RESTful services](https://en.wikipedia.org/wiki/Representational_state_transfer)
+
+```notes
+One doesn't need to know Open API if not using REST.
+A brief introduction of REST is required for passive users.
+```
+---
+
+# REpresentational State Transfer
+
+REST-compliant web services allow the requesting systems to access 
+and manipulate textual representations of web resources by using a 
+uniform and predefined set of stateless operations.
+
+---
+
+# Hyper Text Transfer Protocol
+
+The Hypertext Transfer Protocol (HTTP) is a stateless application-
+   level protocol for distributed, collaborative, hypertext information
+   systems.
+
+---
+> "The World Wide Web" is built on HTTP protocol and by default based on RESTful architecture.
+---
+# What does that mean?
+---
+## A typical webpage is a HTML document composed of various independent web resources.
+Such as -
+<ul>
+	<Appear>
+		<li>Images / Video / Audio</li>
+		<li>CSS</li>
+		<li>Scripts</li>
+		<li>Fonts</li>
+		<li>... and many more</li>
+	</Appear>
+</ul>
+---
+# Web resources
+- Have URL
+- Stateless
+- Cacheable
+- Response === URL + Request headers + HTTP Verb
+---
+---
+```jsx
+<CodeSnippet />
+```
+---
+# The end
